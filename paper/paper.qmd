@@ -1,0 +1,86 @@
+---
+title: "Toronto Marriage Licence Statistics"
+subtitle: "Discussions and Graphs"
+author: 
+  - Ruiyang Wang
+thanks: "Code and data are available at: https://github.com/Ruiyang-Wang/STA304-Week3."
+date: today
+date-format: long
+abstract: "This study analyzes the marriage licence statistics for Toronto, focusing on marrying trends over recent years."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+setwd("/home/rstudio/STA304 Week3/starter_folder-main-master")
+data <- read_csv(("data/analysis_data/analysis_data.csv"))
+
+```
+
+
+# Introduction
+
+You can and should cross-reference sections and sub-sections. We use @talia, @opendatatoronto, and @rohan.
+
+The remainder of this paper is structured as follows. @sec-mydatasection
+
+
+
+# Data {#sec-mydatasection}
+
+Some of our data is of marriage (@fig-marriage), from @opendataatoronto.
+
+```{r}
+#| label: fig-marriage
+#| fig-cap: Marriage date and licences
+#| echo: false
+
+ data |> 
+  ggplot(aes(x = date, y = marriage_licenses)) +
+  geom_point()
+
+```
+
+
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+
+
+\newpage
+
+
+# References
+
+
+aa`   
